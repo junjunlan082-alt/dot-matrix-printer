@@ -1,0 +1,19 @@
+A NAME{
+                color: #000000;
+}
+
+A HREF{
+                color: #b22222;
+                text-decoration: none;
+}
+
+A:link, A:visited, A:active {   color: #ffffff; text-decoration: none }
+
+A FONT:link{
+                color: #0099ff;
+}
+
+
+A:hover {
+                color: #0099ff;
+}

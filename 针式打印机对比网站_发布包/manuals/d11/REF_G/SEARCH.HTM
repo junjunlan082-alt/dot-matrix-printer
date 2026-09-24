@@ -1,0 +1,751 @@
+<!-- saved from url=(0013)about:internet -->
+<html>
+<head>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=GB2312">
+<META NAME="Version" CONTENT="2.00K" charset="gb2312">
+<TITLE>搜索</TITLE>
+</HEAD>
+ <script language="JavaScript">
+ <!-- 
+ 	myname = 2; 
+ //-->
+ </script>
+ <script> 
+ <!-- 	// scripting language is deliberately ambiguous
+ 		// if IE 4 or later... then get this stylesheet (IE3 for Windows gets confused with straightforward check, hence the contorted logic : 
+ 		if ((document.images) && (navigator.appName != "Netscape") && (navigator.appVersion.indexOf('Mac') == -1)) {
+         	document.writeln("<link rel=\"stylesheet\" href=\"LINK.CSS\">")
+         };
+ // -->
+ </script>
+ <body background="IMAGES/R_BG.GIF" link="#0066FF" vlink="0066FF">
+
+<A NAME="top"></A>
+
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+   <tr align="right"> 
+     <td> 
+       <SCRIPT LANGUAGE="JavaScript"><!--
+       if (((navigator.userAgent.toLowerCase().indexOf("95") == -1) &&
+            (navigator.userAgent.toLowerCase().indexOf("98") == -1) &&
+            (navigator.userAgent.toLowerCase().indexOf("mac") == -1)) &&
+            (navigator.userAgent.toLowerCase().indexOf("msie") != -1) &&
+           (parseInt(navigator.appVersion) >= 4)) {
+          document.writeln("<A onclick=\"history.back()\" HREF=\"#\"><img src=\"images/r_icback.gif\" width=25 height=25 hspace=5 border=0>返回</A>");
+       }
+       else {
+          document.writeln("<A HREF=\"javascript:history.back()\"><img src=\"images/r_icback.gif\" width=25 height=25 hspace=5 border=0>返回</A>");
+       }
+       //--></SCRIPT>
+     </td>
+   </tr>
+ </table>
+ 
+ 
+<H1>搜索</H1>
+
+ <!--WORDS--> <!--DO NOT ERASE THIS LINE-->
+<script language="javascript">
+<!--
+var key = "";
+function makeEntry (){
+	this.Name="";
+	this.URL = "";
+	this.Desc = "";
+	this.Category = "";
+	return this;
+}
+
+function makeArray(n) {
+	this.length = n;
+	for (var k = 1; k <= n; k++) {
+		this[k] = "";
+	}
+	return this;
+}
+
+function makeLinks(size) {
+	this.length = size;
+	for (var r=1; r<= size; r++) {
+		this[r] = new makeEntry();
+		this[r].Name = namesArray[r];
+		this[r].URL = urlsArray[r];
+		this[r].Desc = descArray[r];
+	}
+	return this;
+}
+
+function showAll(linkobj) {
+	for (var s=1; s<= linkobj.length; s++) {
+		showLink(linkobj,s);
+	}
+}
+
+function showLink (links, index) {
+	document.write("<tr><td>" + links[index].Name + "</td>");
+	document.write("<td><a href=" + links[index].URL + ">" + links[index].Desc + "</a></td></tr>");
+}
+
+function searchLinks(links, keyword){
+	if (keyword != null) {
+		if ((document.images) && (navigator.appName != "Netscape") && (navigator.appVersion.indexOf('Mac') == -1)) {
+			document.writeln("<link rel=\"stylesheet\" href=\"LINK.CSS\">")
+		};
+
+		document.writeln("<!--HEADER-->");
+		document.writeln("<HTML>");
+		document.writeln("<HEAD>");
+		document.writeln("<META NAME=\"Version\" CONTENT=\"1.00K\">");
+		document.writeln("<TITLE>搜索结果</TITLE>");
+		document.writeln("</HEAD>");
+		document.writeln("");
+		document.writeln("<body background=\"images/r_bg.gif\" link=\"#0066FF\" vlink=\"0066FF\">");
+		document.writeln("<A NAME=\"top\"></A>");
+
+		document.writeln("<table width=100% border=0 cellspacing=0 cellpadding=0>");
+		document.writeln("  <tr align=\"right\">");
+		document.writeln("    <td>");
+		document.writeln("      <SCRIPT LANGUAGE=\"JavaScript\"><!--");
+		document.writeln("		if (((navigator.userAgent.toLowerCase().indexOf(\"95\") == -1) &&");
+		document.writeln("				(navigator.userAgent.toLowerCase().indexOf(\"98\") == -1) &&");
+		document.writeln("				(navigator.userAgent.toLowerCase().indexOf(\"mac\") == -1)) &&");
+		document.writeln("				(navigator.userAgent.toLowerCase().indexOf(\"msie\") != -1) &&");
+		document.writeln("				(parseInt(navigator.appVersion) >= 4)) {");
+		document.writeln("			document.writeln(\"<A onclick=\\\"history.back()\\\" HREF=\\\"#\\\"><img src=\\\"images/r_icback.gif\\\" width=25 height=25 hspace=5 border=0>返回</A>\");");
+		document.writeln("		}");
+		document.writeln("		else if ((navigator.userAgent.toLowerCase().indexOf(\"mac\") != -1) &&");
+		document.writeln("				(navigator.userAgent.toLowerCase().indexOf(\"msie\") != -1) &&");
+		document.writeln("				(parseInt(navigator.appVersion) >= 4)) {");
+		document.writeln("			document.writeln(\"<A HREF=\\\"javascript:window.location.reload()\\\"><img src=\\\"images/r_icback.gif\\\" width=25 height=25 hspace=5 border=0>返回</A>\");");
+		document.writeln("		}");
+		document.writeln("		else {");
+		document.writeln("			document.writeln(\"<A HREF=\\\"javascript:history.back()\\\"><img src=\\\"images/r_icback.gif\\\" width=25 height=25 hspace=5 border=0>返回</A>\");");
+		document.writeln("		}");
+		document.writeln("      \/\/--><\/SCRIPT>");
+		document.writeln("    </td>");
+		document.writeln("  </tr>");
+		document.writeln("</table>");
+		document.writeln("<H1>搜索结果</H1>");
+		document.writeln("<center>");
+		document.writeln("<p><hr><table>");
+		document.writeln("");
+		document.writeln("单击右列的文本转到相应的节，或单击返回按钮进行新的搜索。 </table><hr><p>");
+		document.writeln("关键字的搜索结果：" +keyword.toUpperCase() +"<br><p>");		
+		<!--WORDSFORSRCH--> <!--DO NOT ERASE THIS LINE-->
+		document.writeln("<!--HEADER end-->");
+	}
+
+		document.write("<table border>");
+	for (var q=1; q<=links.length; q++) {
+
+		if (keyword != null) {
+			var newkey=keyword.toLowerCase();
+		}
+		var newdesc=links[q].Desc.toLowerCase();
+		var newname=links[q].Name.toLowerCase();
+
+		if (newdesc.indexOf(newkey) != -1) {
+			document.write("<tr><td>" + links[q].Name + "</td>");
+			document.write("<td><a href=\"" + links[q].URL + "\">" + links[q].Desc + "</a></td></tr>");
+			continue;
+		}
+		if (newname.indexOf(newkey) != -1) {
+			document.write("<tr><td>" + links[q].Name + "</td>");
+			document.write("<td><a href=\"" + links[q].URL + "\">" + links[q].Desc + "</a></td></tr>");
+			continue;
+		}
+
+	}
+	document.writeln("<!--FOOTER-->");
+	<!--WORDSFORSRCH end--> <!--DO NOT ERASE THIS LINE-->
+	document.writeln("</table>");
+	document.writeln("</center>");
+	document.writeln("<div align=\"left\"><table width=100% border=0 cellspacing=0 cellpadding=0>");
+	document.writeln("  <tr>");
+	document.writeln("    <td>");
+	document.writeln("      <SCRIPT LANGUAGE=\"JavaScript\"><!--");
+	document.writeln("      if (((navigator.userAgent.toLowerCase().indexOf(\"95\") == -1) &&");
+	document.writeln("           (navigator.userAgent.toLowerCase().indexOf(\"98\") == -1) &&");
+	document.writeln("           (navigator.userAgent.toLowerCase().indexOf(\"mac\") == -1)) &&");
+	document.writeln("           (navigator.userAgent.toLowerCase().indexOf(\"msie\") != -1) &&");
+	document.writeln("          (parseInt(navigator.appVersion) >= 4)) {");
+	document.writeln("         document.writeln(\"<A onclick=\\\"history.back()\\\" HREF=\\\"#\\\"><img src=\\\"images/r_icback.gif\\\" width=25 height=25 hspace=5 border=0>返回</A>\");");
+	document.writeln("      }");
+	document.writeln("      else if ((navigator.userAgent.toLowerCase().indexOf(\"mac\") != -1) &&");
+	document.writeln("               (navigator.userAgent.toLowerCase().indexOf(\"msie\") != -1) &&");
+	document.writeln("               (parseInt(navigator.appVersion) >= 4)) {");
+	document.writeln("         document.writeln(\"<A HREF=\\\"javascript:window.location.reload()\\\">返回<img src=\\\"images/r_icback.gif\\\" width=25 height=25 hspace=5 border=0></A>\");");
+	document.writeln("      }");
+	document.writeln("      else {");
+	document.writeln("         document.writeln(\"<A HREF=\\\"javascript:history.back()\\\">返回<img src=\\\"images/r_icback.gif\\\" width=25 height=25 hspace=5 border=0></A>\");");
+	document.writeln("      }");
+	document.writeln("      \/\/--><\/SCRIPT>");
+	document.writeln("    </td>");
+	document.writeln("  </tr>");
+	document.writeln("</table></div>");
+	document.writeln("</body>");
+	document.writeln("</HTML>");
+
+
+	document.writeln("<!--FOOTER end-->");
+	document.close();
+}
+
+
+
+var linksize=0
+
+namesArray = new makeArray(linksize);
+urlsArray = new makeArray(linksize);
+descArray = new makeArray(linksize);
+
+
+var arraycount=0
+
+
+arraycount += 1
+namesArray[arraycount] = "安全 - 警告、注意和注释"
+urlsArray[arraycount] = "apspe_1.htm#>8f!8f=k!:mwrb b"
+descArray[arraycount] = "警告、注意和注释"
+
+arraycount += 1
+namesArray[arraycount] = "安全指导"
+urlsArray[arraycount] = "apspe_1.htm#>8f!8f=k!:mwrb b"
+descArray[arraycount] = "警告、注意和注释"
+
+arraycount += 1
+namesArray[arraycount] = "安装 - 单页纸进纸器"
+urlsArray[arraycount] = "opt_2.htm#02w05%r3v==xv=fw b"
+descArray[arraycount] = "安装单页纸进纸器"
+
+arraycount += 1
+namesArray[arraycount] = "安装 - 接口卡"
+urlsArray[arraycount] = "opt_4.htm#02w0=sz b"
+descArray[arraycount] = "安装接口卡"
+
+arraycount += 1
+namesArray[arraycount] = "安装 - 自动页对齐器"
+urlsArray[arraycount] = "opt_3.htm#02w0wt6r36tfkfw b"
+descArray[arraycount] = "安装自动页对齐器"
+
+arraycount += 1
+namesArray[arraycount] = "按钮 - 切纸/专用纸"
+urlsArray[arraycount] = "contr_1.htm#04<:mv8j>5f a"
+descArray[arraycount] = "按钮和指示灯"
+
+arraycount += 1
+namesArray[arraycount] = "按钮 - 暂停"
+urlsArray[arraycount] = "contr_1.htm#04<:mv8j>5f a"
+descArray[arraycount] = "按钮和指示灯"
+
+arraycount += 1
+namesArray[arraycount] = "按钮 - 纸张来源"
+urlsArray[arraycount] = "contr_1.htm#04<:mv8j>5f a"
+descArray[arraycount] = "按钮和指示灯"
+
+arraycount += 1
+namesArray[arraycount] = "按钮 - 装入/退出"
+urlsArray[arraycount] = "contr_1.htm#04<:mv8j>5f a"
+descArray[arraycount] = "按钮和指示灯"
+
+arraycount += 1
+namesArray[arraycount] = "按钮 - 字体"
+urlsArray[arraycount] = "contr_1.htm#04<:mv8j>5f a"
+descArray[arraycount] = "按钮和指示灯"
+
+arraycount += 1
+namesArray[arraycount] = "按钮 - 换行/换页"
+urlsArray[arraycount] = "contr_1.htm#04<:mv8j>5f a"
+descArray[arraycount] = "按钮和指示灯"
+
+arraycount += 1
+namesArray[arraycount] = "按钮 - 间距"
+urlsArray[arraycount] = "contr_1.htm#04<:mv8j>5f a"
+descArray[arraycount] = "按钮和指示灯"
+
+arraycount += 1
+namesArray[arraycount] = "标签 - 装入"
+urlsArray[arraycount] = "paper_5.htm#1jg b"
+descArray[arraycount] = "标签"
+
+arraycount += 1
+namesArray[arraycount] = "并行接口"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "并行I/F(接口)双向模式"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "彩色打印"
+urlsArray[arraycount] = "contr_4.htm#2ji4rs! a"
+descArray[arraycount] = "彩色打印"
+
+arraycount += 1
+namesArray[arraycount] = "垂直对齐"
+urlsArray[arraycount] = "troub_6.htm#4rs!wt<l a"
+descArray[arraycount] = "打印自检"
+
+arraycount += 1
+namesArray[arraycount] = "带有标签的交叠多联纸"
+urlsArray[arraycount] = "paper_5.htm#4xsp1jg5d828g62c=14v= b"
+descArray[arraycount] = "带有标签的交叠多联纸"
+
+arraycount += 1
+namesArray[arraycount] = "带有标签的连续纸"
+urlsArray[arraycount] = "paper_5.htm#4xsp1jg5da,pxv= b"
+descArray[arraycount] = "带有标签的连续纸"
+
+arraycount += 1
+namesArray[arraycount] = "错误指示灯"
+urlsArray[arraycount] = "troub_1.htm#j9sc4mnsv8j>5f a"
+descArray[arraycount] = "使用错误指示灯"
+
+arraycount += 1
+namesArray[arraycount] = "打印方向"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "打印纸来源 - 选择"
+urlsArray[arraycount] = "paper_1.htm#q!tqv=ue4t4 a"
+descArray[arraycount] = "选择纸张来源"
+
+arraycount += 1
+namesArray[arraycount] = "打印机驱动程序"
+urlsArray[arraycount] = "soft_1.htm#9xsz4rs!;zhm< a"
+descArray[arraycount] = "关于打印机软件"
+
+arraycount += 1
+namesArray[arraycount] = "访问 - 在Windows Vist,XP,2000 或 NT 4.0"
+urlsArray[arraycount] = "soft_3.htm#tzwindows 2000:mnt 4.0obj9sc4rs!;zg63lpr a"
+descArray[arraycount] = "在Windows Vist,XP,2000和NT 4.0中使用打印机驱动程序"
+
+arraycount += 1
+namesArray[arraycount] = "访问 - 在Windows Me和98中"
+urlsArray[arraycount] = "soft_2.htm#tzwindows me!98:m95obj9sc4rs!;zg63lpr a"
+descArray[arraycount] = "在Windows Me和98中使用打印机驱动程序"
+
+arraycount += 1
+namesArray[arraycount] = "访问 - 设置"
+urlsArray[arraycount] = "soft_4.htm#4rs!;zg63lprihvc8ejv a"
+descArray[arraycount] = "打印机驱动程序设置概述"
+
+arraycount += 1
+namesArray[arraycount] = "单页纸 - 切换"
+urlsArray[arraycount] = "paper_6.htm#gp;;5=a,pxv= b"
+descArray[arraycount] = "切换到连续纸"
+
+arraycount += 1
+namesArray[arraycount] = "单页纸 - 切换到"
+urlsArray[arraycount] = "paper_6.htm#gp;;5=5%r3v= b"
+descArray[arraycount] = "切换到单页纸"
+
+arraycount += 1
+namesArray[arraycount] = "单页纸 - 装入"
+urlsArray[arraycount] = "paper_4.htm#w0hk5%r3v= a"
+descArray[arraycount] = "装入单页纸"
+
+arraycount += 1
+namesArray[arraycount] = "单页纸进纸器 - 安装"
+urlsArray[arraycount] = "opt_2.htm#02w05%r3v==xv=fw b"
+descArray[arraycount] = "安装单页纸进纸器"
+
+arraycount += 1
+namesArray[arraycount] = "单页纸进纸器 - 装入打印纸"
+urlsArray[arraycount] = "opt_2.htm#4s5%r3v==xv=fww0hk4rs!v= b"
+descArray[arraycount] = "从单页纸进纸器装入打印纸"
+
+arraycount += 1
+namesArray[arraycount] = "单向打印 (Uni-D)"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "电气部分"
+urlsArray[arraycount] = "apspe_3.htm#5gfx27v b"
+descArray[arraycount] = "电气部分"
+
+arraycount += 1
+namesArray[arraycount] = "多联纸 - 单页纸"
+urlsArray[arraycount] = "paper_5.htm#62c=14v= b"
+descArray[arraycount] = "多联表格纸"
+
+arraycount += 1
+namesArray[arraycount] = "多联纸 - 覆盖"
+urlsArray[arraycount] = "paper_5.htm#828g62c=14v= b"
+descArray[arraycount] = "交叠多联表格纸"
+
+arraycount += 1
+namesArray[arraycount] = "多联纸 - 继续"
+urlsArray[arraycount] = "paper_5.htm#62c=14v= b"
+descArray[arraycount] = "多联表格纸"
+
+arraycount += 1
+namesArray[arraycount] = "卸下 - 连续纸"
+urlsArray[arraycount] = "paper_3.htm#j9scgpv=9&d b"
+descArray[arraycount] = "使用切纸功能"
+
+arraycount += 1
+namesArray[arraycount] = "分组模式"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "蜂鸣器（报警器）设置"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "符合“能源之星”标准"
+urlsArray[arraycount] = "apspe_1.htm#7:odt4v.pg1jw<energy star c"
+descArray[arraycount] = "符合能源之星标准<font size=\"+2\">E</font>NERGY <font size=\"+2\">S</font>TAR"
+
+arraycount += 1
+namesArray[arraycount] = "交叠多联纸"
+urlsArray[arraycount] = "paper_5.htm#828g62c=14v= b"
+descArray[arraycount] = "交叠多联表格纸"
+
+arraycount += 1
+namesArray[arraycount] = "覆盖格式 - 在缺省设置模式中选择"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "更换色带架 - 更换"
+urlsArray[arraycount] = "opt_1.htm#8;;i4x:p b"
+descArray[arraycount] = "更换色带架"
+
+arraycount += 1
+namesArray[arraycount] = "高速草图"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "故障查找 - USB问题"
+urlsArray[arraycount] = "troub_3.htm#=b>vusbnjlb a"
+descArray[arraycount] = "解决USB问题"
+
+arraycount += 1
+namesArray[arraycount] = "国际字符集"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "规格 - 标准和认证"
+urlsArray[arraycount] = "apspe_4.htm#1jw<:mhov$ a"
+descArray[arraycount] = "标准和认证"
+
+arraycount += 1
+namesArray[arraycount] = "接口卡 - 安装"
+urlsArray[arraycount] = "opt_4.htm#02w0=sz b"
+descArray[arraycount] = "安装接口卡"
+
+arraycount += 1
+namesArray[arraycount] = "连续纸 - 卸下"
+urlsArray[arraycount] = "paper_3.htm#j9scgpv=9&d b"
+descArray[arraycount] = "使用切纸功能"
+
+arraycount += 1
+namesArray[arraycount] = "连续纸 - 卸下"
+urlsArray[arraycount] = "paper_3.htm#h!oba,pxv= c"
+descArray[arraycount] = "取下连续纸"
+
+arraycount += 1
+namesArray[arraycount] = "连续纸 - 切换"
+urlsArray[arraycount] = "paper_6.htm#gp;;5=5%r3v= b"
+descArray[arraycount] = "切换到单页纸"
+
+arraycount += 1
+namesArray[arraycount] = "连续纸 - 切换到"
+urlsArray[arraycount] = "paper_6.htm#gp;;5=a,pxv= b"
+descArray[arraycount] = "切换到连续纸"
+
+arraycount += 1
+namesArray[arraycount] = "连续纸 - 装入"
+urlsArray[arraycount] = "paper_3.htm#w0hka,pxv= a"
+descArray[arraycount] = "装入连续纸"
+
+arraycount += 1
+namesArray[arraycount] = "明信片"
+urlsArray[arraycount] = "paper_5.htm#cwpef, b"
+descArray[arraycount] = "明信片"
+
+arraycount += 1
+namesArray[arraycount] = "信封"
+urlsArray[arraycount] = "paper_5.htm#pe7b b"
+descArray[arraycount] = "信封"
+
+arraycount += 1
+namesArray[arraycount] = "切纸功能"
+urlsArray[arraycount] = "paper_3.htm#j9scgpv=9&d b"
+descArray[arraycount] = "使用切纸功能"
+
+arraycount += 1
+namesArray[arraycount] = "驱动（打印机驱动程序）"
+urlsArray[arraycount] = "soft_1.htm#9xsz4rs!;zhm< a"
+descArray[arraycount] = "关于打印机软件"
+
+arraycount += 1
+namesArray[arraycount] = "设置杆 - 纸厚调节"
+urlsArray[arraycount] = "paper_2.htm#5wuv=:q5w=z8k a"
+descArray[arraycount] = "调整纸厚调节杆"
+
+arraycount += 1
+namesArray[arraycount] = "手动进纸等待时间"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "用于拖纸器的页长"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "纸厚调节杆"
+urlsArray[arraycount] = "paper_2.htm#5wuv=:q5w=z8k a"
+descArray[arraycount] = "调整纸厚调节杆"
+
+arraycount += 1
+namesArray[arraycount] = "自动切纸"
+urlsArray[arraycount] = "paper_3.htm#j9scgpv=9&d b"
+descArray[arraycount] = "使用切纸功能"
+
+arraycount += 1
+namesArray[arraycount] = "自动切纸"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "自动页对齐器"
+urlsArray[arraycount] = "opt_3.htm#wt6r36tfkfw a"
+descArray[arraycount] = "自动页对齐器"
+
+arraycount += 1
+namesArray[arraycount] = "安装"
+urlsArray[arraycount] = "opt_3.htm#02w0wt6r36tfkfw b"
+descArray[arraycount] = "安装自动页对齐器"
+
+arraycount += 1
+namesArray[arraycount] = "打印位置"
+urlsArray[arraycount] = "opt_3.htm#5wu4rs!n;vc b"
+descArray[arraycount] = "调整打印位置"
+
+arraycount += 1
+namesArray[arraycount] = "装入打印纸"
+urlsArray[arraycount] = "opt_3.htm#j9scwt6r36tfkfww0hk4rs!v= b"
+descArray[arraycount] = "使用自动页对齐器装入打印纸"
+
+arraycount += 1
+namesArray[arraycount] = "自动换行"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "自动CR（回车）*"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "自动I/F（接口）等待时间"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "自检测"
+urlsArray[arraycount] = "troub_6.htm#4rs!wt<l a"
+descArray[arraycount] = "打印自检"
+
+arraycount += 1
+namesArray[arraycount] = "字符表"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "字体 - 在缺省设置模式中选择"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "字体 - 在控制面板上选择"
+urlsArray[arraycount] = "contr_2.htm#q!tqwvle:mwv<d> a"
+descArray[arraycount] = "选择字体和字间距"
+
+arraycount += 1
+namesArray[arraycount] = "0斜线"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "A.G.M(IBM)"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "双向打印 (Bi-D)"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "跳过页缝"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "EPSON Status Monitor 3应用工具"
+urlsArray[arraycount] = "soft_1.htm#9xsz4rs!;zhm< a"
+descArray[arraycount] = "关于打印机软件"
+
+arraycount += 1
+namesArray[arraycount] = "EPSON Status Monitor 3应用工具"
+urlsArray[arraycount] = "soft_5.htm#j9scepson status monitor 3s&sc9$> a"
+descArray[arraycount] = "使用EPSON Status Monitor 3"
+
+arraycount += 1
+namesArray[arraycount] = "安装"
+urlsArray[arraycount] = "soft_5.htm#setting up epson status monitor 3 b"
+descArray[arraycount] = "设置EPSON Status Monitor 3"
+
+arraycount += 1
+namesArray[arraycount] = "访问"
+urlsArray[arraycount] = "soft_5.htm#accessing epson status monitor 3 b"
+descArray[arraycount] = "访问 EPSON Status Monitor 3"
+
+arraycount += 1
+namesArray[arraycount] = "ESC/P-K"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "缺省设置"
+urlsArray[arraycount] = "contr_3.htm#9xsz4rs!;z5dd,hoihvc a"
+descArray[arraycount] = "关于打印机的缺省设置"
+
+arraycount += 1
+namesArray[arraycount] = "更改"
+urlsArray[arraycount] = "contr_3.htm#88dd,hoihvc b"
+descArray[arraycount] = "更改缺省设置"
+
+arraycount += 1
+namesArray[arraycount] = "缺省设置模式"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "十六进制传输(Hex Dump)"
+urlsArray[arraycount] = "troub_7.htm#4rs!hex dump a"
+descArray[arraycount] = "打印十六进制传输(Hex Dump)"
+
+arraycount += 1
+namesArray[arraycount] = "I/F（接口）模式"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "IBM PPDS仿真"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "夹纸 - 清除"
+urlsArray[arraycount] = "troub_4.htm#ge3<pv= a"
+descArray[arraycount] = "清除夹纸"
+
+arraycount += 1
+namesArray[arraycount] = "间距 - 选择"
+urlsArray[arraycount] = "contr_2.htm#q!tqwvle:mwv<d> a"
+descArray[arraycount] = "选择字体和字间距"
+
+arraycount += 1
+namesArray[arraycount] = "微调整功能 - 切纸位置"
+urlsArray[arraycount] = "paper_7.htm#5wugpv=n;vc b"
+descArray[arraycount] = "调整切纸位置"
+
+arraycount += 1
+namesArray[arraycount] = "微调整功能 - 页顶位置"
+urlsArray[arraycount] = "paper_7.htm#5wur36%n;vc b"
+descArray[arraycount] = "调整页顶位置"
+
+arraycount += 1
+namesArray[arraycount] = "Status Monitor 3应用工具"
+urlsArray[arraycount] = "soft_1.htm#9xsz4rs!;zhm< a"
+descArray[arraycount] = "关于打印机软件"
+
+arraycount += 1
+namesArray[arraycount] = "Status Monitor 3应用工具"
+urlsArray[arraycount] = "soft_5.htm#j9scepson status monitor 3s&sc9$> a"
+descArray[arraycount] = "使用EPSON Status Monitor 3"
+
+arraycount += 1
+namesArray[arraycount] = "USB接口"
+urlsArray[arraycount] = "contr_3.htm#d,hoihvcd#j= c"
+descArray[arraycount] = "缺省设置模式"
+
+arraycount += 1
+namesArray[arraycount] = "问题"
+urlsArray[arraycount] = "troub_3.htm#=b>vusbnjlb a"
+descArray[arraycount] = "解决USB问题"
+
+linksize = arraycount;
+
+// ----end data -------
+
+// final stuff
+// the main program ---
+
+jsi = new makeLinks(linksize);
+document.write("<title>搜索</title><body bgcolor=white>");
+
+//-->
+</script>
+
+ <!--WORDS end--> <!--DO NOT ERASE THIS LINE-->
+ 
+ <center>
+<FORM NAME="form1" onSubmit="return false;">
+<TABLE WIDTH="300"><TR><TD><B>键入关键字并单击搜索:</B><BR>
+</td><td></td><tr><td>
+<INPUT TYPE="text" NAME="searchfor" VALUE="" SIZE=40></td><td>
+<INPUT TYPE="button" VALUE="搜索" onClick="searchLinks(jsi,form1.searchfor.value)"><BR>
+
+</td></tr></table>
+<script>
+<!--
+document.write("<p>");
+document.write("<hr><table>");
+document.write("此动作搜索索引并返回一个结果列表。关键字不区分大小写。");
+document.write("</table><hr>");
+//-->
+</script>
+</FORM>
+</center>
+
+<!--Back-->
+
+<div align="left">
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+   <tr>
+      <td>
+         <SCRIPT LANGUAGE="JavaScript"><!--
+            // if the OS is NOT Win95 or Win98 or Mac, then it must be Windows3.1 (for Core team purposes)
+            // if Windows3.1 and InternetExplorer and version > 4
+            if (((navigator.userAgent.toLowerCase().indexOf("95") == -1) &&
+                 (navigator.userAgent.toLowerCase().indexOf("98") == -1) &&
+                 (navigator.userAgent.toLowerCase().indexOf("mac") == -1)) &&
+                 (navigator.userAgent.toLowerCase().indexOf("msie") != -1) &&
+                 (parseInt(navigator.appVersion) >= 4)) {
+               document.writeln("<A onclick=\"history.back()\" HREF=\"#\">返回<img src=\"images/r_icback.gif\" width=25 height=25 hspace=5 border=0></A>");
+            }
+            else {
+               document.writeln("<A HREF=\"javascript:history.back()\">返回<img src=\"images/r_icback.gif\" width=25 height=25 hspace=5 border=0></A>");
+            }
+         //--></SCRIPT>
+      </div></td>
+   </tr>
+</table>
+</div>
+<!--Back END-->
+</body>
+</HTML>
